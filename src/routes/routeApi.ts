@@ -13,7 +13,8 @@ import {
 import {
 	getOneYearTurnupRatioData,
 	getSixMonthsTurnupRatioData,
-	getTwoYearsTurnupRatioData
+	getTwoYearsTurnupRatioData,
+	getOneYearSeasonalBookingCheckInData
 } from '../controllers/controllerTurnupRatio';
 import {
 	getOneYearGuestPerCountryData,
@@ -44,6 +45,8 @@ routerApi.get(
 
 // TODO: adding the new route here
 
+routerApi.get('/v1/oneYearSeasonalBookingCheckInData',getOneYearSeasonalBookingCheckInData);
+
 routerApi.get('/v1/sixMonthsTurnupRatioData', getSixMonthsTurnupRatioData);
 routerApi.get('/v1/oneYearTurnupRatioData', getOneYearTurnupRatioData);
 routerApi.get('/v1/twoYearsTurnupRatioData', getTwoYearsTurnupRatioData);
@@ -62,5 +65,7 @@ routerApi.get('/v1/visitorTypeData', getVisitorTypeData);
 routerApi.get('/v1/roomTypesData', getRoomTypesData);
 routerApi.get('/v1/visitPurposeData', getVisitPurposeData);
 routerApi.get('/v1/stayingLengthData', getStayingLengthData);
+
+
 
 export default routerApi;
